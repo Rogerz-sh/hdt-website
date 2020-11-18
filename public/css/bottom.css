@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.bottomwrapper{
+	width:100%;
+	
+	color:#FFF;
+	text-align:center;
+	height:auto;
+	clear:both;
+	font-size:14px;
+	padding-top:25px;
+	
+	
+}
+
+.bottombg{
+
+	height:495px;
+	background-color:#bfbfbf;
+	
+}
+
+.bottomwrapper .bottomtitle{
+	width:100%;
+	height:36px;
+	background-color:#ababab;
+	position:absolute;
+	
+}
+
+
+
+
+
+
+.bottomwrapper .bottomlist{
+	width:100%;
+	height:auto;
+	
+	z-index:10;
+	
+	
+	text-align:center;
+	
+}
+
+
+.bottomwrapper .bottomlist .bottomlinks{
+	width:60%;
+	height:auto;
+	
+	margin:auto;
+
+	position:relative;
+	text-align:center;
+	
+	
+}
+
+
+
+
+.bottomwrapper .bottomlist .bottomlinks .links{
+	width:16%;
+	
+	height:auto;
+	margin:auto;
+	vertical-align:top;
+	
+	text-align:center;
+	
+	display:table-cell;
+	
+}
+
+
+
+
+.bottomwrapper .bottomlist .bottomlinks .links a{
+	display:block;
+	width:100%;
+	height:35px;
+	line-height:35px;
+	margin:auto;
+	
+	text-align:center;
+	float:left;
+	color:#FFF;
+	
+}
+
+
+.bottomwrapper .bottomlist .bottomlinks .links .title{
+	margin-bottom:15px;
+	
+}
+
+
+.bottomwrapper .bottomcopy{
+	font-size:12px;
+	margin:auto;
+	margin-top:25px;
+	width:50%;
+	height:auto;
+	border-top:solid 1px #cccccc;
+	padding:5px;
+	text-align:center;
+	line-height:200%;
+	
+}
+
+.bottomwrapper .bottomlist .bottomlinks .links .blink{
+	display:block;
+	text-align:left;
+	width:40%;
+	margin:auto;
+	overflow:visible;
+	white-space:nowrap; 
+}
+
+.bottomwrapper .bottomlist .bottomlinks .links  .hdtent{
+	position: absolute;
+	background-image: url('../images/wangshi.png');
+	width: 135px;
+	height: 35px;
+	margin-left: 135px;
+	margin-top: 0px;
+	display: block;
+}

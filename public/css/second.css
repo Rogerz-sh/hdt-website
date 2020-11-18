@@ -1,0 +1,335 @@
+
+.titlepic{
+	border:solid 1px #d6d6d6;
+}
+
+.introduce{
+	line-height:25px;
+	
+}
+
+.introduce .round{
+	color:#FFF;
+	background-color:#d6d6d6;
+	display:block;
+	float:left;
+	margin-right:10px;
+	width:43px;
+	height:43px;
+	border-radius:20px;
+	text-align:center;
+	line-height:43px;
+	margin-bottom:20px;
+}
+
+.introduce  .roundon{
+	background-color:#52c3f1;
+	
+}
+
+.introduce #yearlist{
+	line-height:40px;
+	
+}
+
+.introduce  .yearon{
+	color:#52c3f1;
+	
+}
+
+
+.manager{
+	line-height:35px;
+	min-height:845px;
+	
+}
+
+.manager .managericons{
+	text-align:left;
+	background-image:url(../images/lineback.jpg);
+	background-repeat:repeat-x;
+	background-position:left center;
+	
+	
+}
+
+
+.manager .managericons .icons{
+	border:solid 3px #d6d6d6;
+	margin-right:43px;
+	cursor:pointer;
+	
+	
+}
+
+.manager .managericons .iconshow{
+	border-color:#52c3f1;
+}
+
+.manager .managerdetail{
+	margin-top:67px;
+	display:none;
+	
+}
+
+.manager .managerphoto{
+	float:left;
+	margin-right:3%;
+}
+
+
+.manager .managercontent{
+	float:left;
+	
+}
+
+.manager .managercontent .managertitle{
+	font-size:18px;
+	margin-bottom:20px;
+	font-weight:bold;
+	
+}
+
+
+.manager .managercontent .managerhistory{
+	font-size:14px;
+	line-height:35px;
+	background-image:url(../images/dotblue2.png);
+	background-repeat:no-repeat;
+	background-position:left 14px;
+	padding-left:15px;
+	
+	
+}
+
+.rollcontainer{
+	width:100%;
+	height:225px;
+	margin-bottom:35px;
+}
+
+.rollcontainer #arrleft{
+	display:block;
+	background-image:url(../images/rollleft.png);
+	width:12px;
+	height:18px;
+	
+	float:left;
+	margin-top:103px;
+	
+}
+
+
+.rollcontainer #arrright{
+	display:block;
+	background-image:url(../images/rollright.png);
+	width:12px;
+	height:18px;
+	
+	float:right;
+	margin-top:103px;
+	
+}
+
+.rollcontainer .rollicons{
+	
+	float:left;
+	height:225px;
+	margin-left:26px;
+	overflow:hidden;
+}
+
+.rollcontainer .rollicons #iconcontainer{
+	width:1548px;
+	margin-left:0px;
+}
+
+.rollcontainer .rollicons #iconcontainer img{
+	float:left;
+	margin-right:8px;
+}
+
+.glorylist{
+	display:none;
+}
+
+
+.photoshow{
+	width:164px;
+	height:152px;
+	padding:4px;
+	float:left;
+	background-color:#d6d6d6;
+	margin-right:9px;
+	
+}
+
+#hrlist{
+	margin-top:30px;
+}
+
+#hrlist .hrareas{
+	height:43px;
+	text-align:left;
+	background-image:url(../images/lineback.jpg);
+	background-repeat:repeat-x;
+	background-position:left center;
+	width:440px;
+	margin-bottom:20px;
+	
+}
+
+
+
+#hrlist .jobinfo{
+	width:44%;
+	height:auto;
+	margin-right:4%;
+	font-size:14px;
+	line-height:25px;
+	float:left;
+}
+
+#hrlist .jobinfo li{
+	text-align:left;
+	margin-bottom:20px;
+}
+
+#hrlist .jobinfo .jobtitle{
+	color:#52c3f1;
+}
+
+
+.addressmap{
+	width:100%;
+	height:auto;
+	margin-top:0px;
+	
+}
+
+
+.mappoint{
+	
+	position:absolute;
+	display:block;
+	z-index:10;
+	/*background-size:cover;*/
+	
+	
+	width:251px;
+	height:59px;
+	background-position:right top;
+	background-repeat:no-repeat;
+	
+}
+
+
+.mappoint:hover{
+	
+	
+	height:148px;
+	
+}
+
+.mappoint1{
+	
+	position:absolute;
+	display:block;
+	z-index:10;
+	background-size:cover;
+	
+	width:180px;
+	height:102px;
+	
+}
+
+#psh{
+	background-image:url(../pics/maplabel2.png);
+}
+
+#psh:hover{
+	background-image:url(../pics/mapaddrsh.png);
+	z-index:20;
+}
+
+
+#pbj{
+	background-image:url(../pics/maplabel1.png);
+	
+}
+
+#pbj:hover{
+	background-image:url(../pics/mapaddrbj.png);
+	z-index:20;
+}
+
+
+#pgz{
+	
+	background-image:url(../pics/maplabel1.png);
+	
+}
+#pgz:hover{
+	background-image:url(../pics/mapaddrgz.png);
+	z-index:20;
+}
+
+#pkm{
+	
+	background-image:url(../pics/maplabel3.png);
+	
+}
+#pkm:hover{
+	background-image:url(../pics/mapaddrkm.png);
+	z-index:20;
+}
+
+#pcd{
+	
+	background-image:url(../pics/maplabel3.png);
+	
+}
+#pcd:hover{
+	background-image:url(../pics/mapaddrcd.png);
+	z-index:20;
+}
+
+#pwh{
+	
+	background-image:url(../pics/maplabel3.png);
+	
+}
+#pwh:hover{
+	background-image:url(../pics/mapaddrwh.png);
+	z-index:20;
+}
+
+#pnj{
+	
+	background-image:url(../pics/maplabel3.png);
+	z-index:30;
+}
+#pnj:hover{
+	background-image:url(../pics/mapaddrnj.png);
+	z-index:30;
+}
+
+#phz{
+	
+	background-image:url(../pics/maplabel3.png);
+	z-index:40;
+}
+#phz:hover{
+	background-image:url(../pics/mapaddrhz.png);
+	z-index:40;
+}
+
+#pxm{
+	
+	background-image:url(../pics/maplabel3.png);
+	z-index:40;
+}
+#pxm:hover{
+	background-image:url(../pics/mapaddrxm.png);
+	z-index:40;
+}

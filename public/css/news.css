@@ -1,0 +1,343 @@
+.searchbar{
+	width:100%;
+	height:45px;
+}
+
+.searchbar .searchtime{
+	float:left;
+	position:absolute;
+}
+
+
+.searchbar .searchkeyword{
+	float:right;
+}
+
+
+.formitem{
+	padding:4px;
+	background-color:#e6e6e6;
+	float:left;
+	margin-right:22px;
+	transition: 0.3s;
+	
+}
+
+.formitem .formtxt{
+	background-color:#FFF;
+	font-size:14px;
+	color:#959595;
+	height:19px;
+	line-height:19px;
+	text-align:center;
+	margin-right:6px;
+	float:left;
+	cursor:pointer;
+}
+
+.formitem #year{
+	width:86px;
+}
+
+.formitem  #month{
+	width:46px;
+}
+
+.formitem .btndropdown{
+	display:block;
+	width:19px;
+	height:19px;
+	background-image:url(../images/arrowdown.jpg);
+	float:left;
+	
+}
+
+
+
+.formitem ul{
+	width:100%;
+	height:auto;
+	float:none;
+	margin-top:25px;
+	display:none;
+	
+}
+
+
+.formitem:hover ul{
+	display:block;
+}
+
+.formitem ul li{
+	width:100%;
+	text-align:center;
+
+	background-color:#FFF;
+	height:19px;
+	line-height:19px;
+	margin-top:3px;
+	margin-bottom:3px;
+	cursor:pointer;
+}
+
+
+.formitem ul li:hover{
+	width:100%;
+	text-align:center;
+
+	background:none;
+	height:19px;
+	line-height:19px;
+	margin-top:3px;
+	margin-bottom:3px;
+}
+
+.formitem .forminput{
+	background-color:#FFF;
+	font-size:14px;
+	color:#959595;
+	height:19px;
+	line-height:19px;
+	text-align:left;
+	margin-right:6px;
+	float:left;
+	border:none;
+	
+}
+
+
+.formitem #searchkey{
+	width:136px;
+	background-image:url(../images/searchicon.jpg);
+	background-repeat:no-repeat;
+	background-position:right center;
+}
+
+
+.formitem .btnsearch{
+	display:block;
+	width:32px;
+	height:19px;
+	background-image:url(../images/btnsearch.jpg);
+	float:left;
+	
+}
+
+
+.newslist{
+	width:100%;
+	height:auto;
+	margin-top:15px;
+}
+
+
+.newsitem{
+	width:100%;
+	height:168px;
+	line-height:31px;
+	border-bottom:solid 1px #bcbcbc;
+	margin-bottom:25px;
+}
+
+.newsitem li{
+	text-align:left;
+	float:left;
+}
+
+
+
+.newsitem .newspic{
+	width:32%;
+	height:124px;
+	line-height:31px;
+	margin-right:15px;
+    overflow:hidden;
+}
+
+
+.newsitem .newspic img{
+	border:solid 4px #e6e6e6;
+}
+
+.newsitem .newspic:hover img{
+	border:solid 4px #52c3f1;
+}
+
+
+
+.newsitem .newstitle{
+	width:60%;
+	height:auto;
+	line-height:31px;
+	
+	font-size:15px;
+	font-weight:bold;
+}
+
+
+.newsitem .newsdate{
+	width:60%;
+	height:auto;
+	line-height:31px;
+	margin-bottom:5px;
+	font-size:14px;
+	
+}
+
+
+.newsitem .newsdetail{
+	width:60%;
+	height:auto;
+	line-height:20px;
+	
+	font-size:14px;
+	
+}
+
+
+.newsitem .linkdetail{
+	font-size:14px;
+	color:#2fbaf2;
+	text-decoration:none;
+	float:right;
+	display:block;
+	
+}
+
+
+.newsitem .linkdetail:hover{
+
+	color:#FF0000;
+	text-decoration:underline;
+	
+	
+}
+
+.subjectyears{
+	height:43px;
+	text-align:left;
+	background-image:url(../images/lineback.jpg);
+	background-repeat:repeat-x;
+	background-position:left center;
+	width:431px;
+	margin-bottom:20px;
+	
+}
+
+.subjectlists{
+	width:100%;
+	height:auto;
+	font-size:14px;
+	line-height:22px;
+	display: none;
+	
+}
+
+
+.subjectlists .subjectitem{
+	width:47%;
+	height:auto;
+	margin-right:2%;
+	float:left;
+	margin-bottom:20px;
+}
+
+
+
+
+.subjectlists .subjectitem .subjectpic{
+	width:100%;
+	height:auto;
+	
+}
+
+
+
+
+.subjectlists .subjectitem .subjectpic img{
+	border:solid 4px #e6e6e6;
+	transition: 0.5s;
+}
+
+
+.subjectlists .subjectitem .subjectpic:hover img{
+	border:solid 4px #52c3f1;
+}
+
+
+
+
+.subjectlists .subjectitem .morelink{
+	float:right;
+	color:#52c3f1;
+}
+
+
+.subjectlists .line{
+	float:none;
+	clear:both;
+	margin-top:0px;
+	margin-bottom:30px;
+}
+
+
+
+.newscontent{
+	width:100%;
+	height:auto;
+    line-height:32px;
+}
+
+
+.newscontent .newstitle{
+	font-size:16px;
+	line-height:32px;
+	color:#52c3f1;
+	font-weight:bold;
+}
+
+
+
+.newscontent .newsdate{
+	font-size:14px;
+	line-height:32px;
+	color:#52c3f1;
+
+}
+
+
+
+.newscontent .newsdetail{
+	font-size:14px;
+	line-height:25px;
+	text-indent:28px;
+	
+}
+
+
+
+.newscontent .newsdetail img{
+	border:solid 1px #d6d6d6;
+}
+
+
+
+.newscontent .subjectdetail{
+	font-size:14px;
+	line-height:25px;
+
+	
+}
+
+
+
+.newscontent .subjectdetail img{
+	border:solid 1px #d6d6d6;
+}
+
+.subjectmainpic{
+	width:100%;
+	margin:auto;
+}
+
+

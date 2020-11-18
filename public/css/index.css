@@ -1,0 +1,232 @@
+.indexbanner{
+    width: 100%;
+    min-width: 1200px;
+
+    margin: auto;
+    z-index: 20;
+    height:auto;
+    overflow: hidden;
+
+
+}
+
+.indexbanner .indexbannercontrol{
+    width: 100%;
+    z-index: 20;
+    height:auto;
+
+	min-height:60px;
+	position:absolute;
+	min-width:1200px;
+	/*padding-top:300px;*/
+	top:0px;
+
+
+}
+
+
+.indexbanner #bannerleft{
+    display: block;
+    width: 14px;
+    height: 20px;
+    background-image: url('../images/arrowleft.png');
+    
+    margin-left: 48%;
+    position: absolute;
+    z-index: 1;
+}
+
+.indexbanner #bannerright{
+    display: block;
+    width: 14px;
+    height: 20px;
+    background-image: url('../images/arrowright.png');
+   
+    margin-left: 52%;
+    position: absolute;
+    z-index: 1;
+}
+
+.indexbanner .allimgs{
+    min-height: 535px;
+    height: auto;
+}
+
+
+.indexbanner .allimgs .banner{
+    display: block;
+
+    float: left;
+}
+
+.indexnewswrapper{
+    width: 100%;
+    min-width: 1200px;
+    margin-top: 34px;
+    background-color: #e7e7e7;
+    height: auto;
+    padding-bottom: 15px;
+
+}
+
+
+.indexnewswrapper .allnews{
+    width: 100%;
+    margin: auto;
+    height: auto;
+
+}
+
+
+.indexnewswrapper .newsblock{
+    width:32.3%;
+    height: auto;
+    min-height: 404px;
+    margin-left:1%;
+
+    float: left;
+
+
+}
+
+.indexnewswrapper .newsblock .btnmore{
+    position: relative;
+    margin-left: 40%;
+    width: 86px;
+    height: 86px;
+    display: block;
+    background-image: url('../images/indexmore.png');
+    margin-top: -13px;
+}
+
+.indexnewswrapper .newsblock .title{
+    width:90.9%;
+    padding-left: 14px;
+    padding-right: 14px;
+    height: 53px;
+    background-color: #FFF;
+    font-size: 18px;
+    line-height: 53px;
+    text-align: center;
+    font-family:"方正兰亭","黑体","宋体",sans-serif,serif;
+
+}
+
+.indexnewswrapper .newsblock .title1{
+    color: #58b8e1;
+
+}
+
+.indexnewswrapper .newsblock .title2{
+    color: #c81a20;
+
+
+}
+
+.indexnewswrapper .newsblock .title3{
+    color: #58b8e1;
+
+}
+
+
+.indexnewswrapper .newsblock .detail{
+    width:90.9%;
+    height: 322px;
+    margin-top: 3px;
+    background-color: #FFF;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    overflow: hidden;
+
+
+}
+
+.indexnewswrapper .newsblock .detail .newspic{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    height: 165px;
+}
+
+.indexnewswrapper .newsblock .detail .newslist{
+    display: block;
+    width: 93%;
+    padding-left: 25px;
+    overflow: hidden;
+    height: 39px;
+    border-bottom: solid 1px #cdcdcd;
+    color: #959595;
+    line-height: 39px;
+    background-image: url('../images/listicon.png');
+    background-repeat: no-repeat;
+    background-position: left 14px;
+}
+
+.indexnewswrapper .newsblock .detail .newslist:hover{
+    text-decoration: underline;
+    color: #5dc7f2;
+}
+
+
+.indexnewswrapper .newsblock .detail .newicon{
+    position: absolute;
+    float: left;
+    margin-top: 3px;
+}
+
+
+.indexnewswrapper .newsblock .detail .newsbanner{
+    width: 100%;
+    height: 279px;
+    overflow: hidden;
+}
+
+
+.indexnewswrapper .newsblock .detail .newsbanner .allnewsbanner{
+    height:279px;
+    width:100%;
+}
+
+.indexnewswrapper .newsblock .detail .newsbanner .allnewsbanner a{
+    height:279px;
+    width:100%;
+    float: left;
+}
+
+
+.indexnewswrapper .newsblock .detail .newsbanner .allnewsbanner .newlabel{
+    position: absolute;
+    margin-left: -5px;
+    margin-top: -5px;
+}
+
+
+.indexnewswrapper .newsblock .detail .newsbanner .dots{
+    margin-top: 250px;
+    position: absolute;
+    margin-left: 24%;
+    text-align: right;
+    z-index: 20;
+    width: auto;
+}
+
+
+.indexnewswrapper .newsblock .detail .newsbanner .dots .dot{
+    float:left;
+    display: block;
+    width: 11px;
+    height: 11px;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-image: url('../images/dotgray.png');
+}
+
+.indexnewswrapper .newsblock .detail .newsbanner .dots .gray{
+
+}
+
+.indexnewswrapper .newsblock .detail .newsbanner .dots .blue{
+    background-image: url('../images/dotblue.png');
+}

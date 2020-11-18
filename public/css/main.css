@@ -1,0 +1,273 @@
+body,html{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family:"微软雅黑","宋体",sans-serif,serif;
+    font-size: 12px;
+    line-height: 120%;
+    color: #959595;
+    background-color: #f3f2f2;
+
+/*
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); 
+    -webkit-filter: grayscale(100%);
+*/
+}
+
+.blue{
+	color:#52c3f1;
+	
+}
+
+div{
+    border: none;
+    text-align: left;
+
+}
+
+a:link,a:visited{
+
+    text-decoration: none;
+}
+
+a:hover{
+    color: #5dc7f2;
+}
+
+img{
+
+    border: none;
+}
+
+ul,li{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+
+}
+
+.mainwrapper{
+    width: 100%;
+    min-width: 1200px;
+    height: auto;
+}
+
+
+.contentwrapper{
+	width: 100%;
+	position:relative;
+	margin:auto;
+	margin-top:97px;
+	min-width:1200px;
+	
+	font-size:14px;
+	color:#6f6f6f;
+	
+}
+
+.navigator{
+	width:78.5%;
+	height:32px;
+	margin:auto;
+	margin-bottom:32px;
+	text-align:left;
+	line-height:32px;
+	border-bottom:solid 1px #bcbcbc;
+}
+
+.contentwrapper .content{
+	width:78.5%;
+	height:32px;
+	margin:auto;
+	
+	text-align:left;
+}
+
+
+.leftcolumn{
+	width:67.7%;
+	height:auto;
+	float:left;
+}
+.leftcolumnen{
+	width:100%;
+	height:auto;
+	float:left;
+}
+.rightcolumn{
+	width:28.2%;
+	height:auto;
+	float:right;
+}
+
+
+
+
+
+.line{
+	width:100%;
+	height:1px;
+	overflow:hidden;
+	background-color:#bcbcbc;
+	line-height:1px;
+	border:none;
+}
+
+
+
+.rightmenu{
+	width:100%;
+	height:auto;
+}
+
+.rightmenu .rightmenuitem{
+	width:100%;
+	height:41px;
+	text-align:center;
+	margin-bottom:3px;
+	background-color:#FFF;
+	line-height:41px;
+	display:block;
+	color:#959595;
+	transition: 0.5s;
+}
+
+.rightmenu{
+	width:100%;
+	height:auto;
+}
+
+
+
+
+.rightmenu .rightmenuitemon{
+	color:#FFF;
+	background-color:#52c3f1;
+}
+
+.rightmenu .rightmenuitem:hover{
+	color:#FFF;
+	background-color:#52c3f1;
+}
+
+.rightmenu .trileft{
+	margin-left:-10%;
+	position:absolute;
+	margin-top:14px;
+	
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .rightmenu .trileft{
+		margin-left:-20px;
+		position:absolute;
+		margin-top:14px;
+	
+	}
+} 
+
+
+
+.rightmenu .rightmenuproduct{
+	text-align:left;
+	width:25%;
+	margin:auto;
+	display:block;
+	
+}
+
+
+.rightcontacttitle{
+	width:100%;
+	height:40px;
+	margin-top:49px;
+	background-color:#FFF;
+	line-height:40px;
+	text-align:center;
+	
+}
+
+.rightcontact{
+	width:100%;
+	height:408px;
+	margin-top:3px;
+	background-color:#FFF;
+	
+}
+
+
+.rightcontact a{
+	color:#6f6f6f;
+	text-decoration:none;
+	
+}
+
+
+
+.round{
+	color:#FFF;
+	background-color:#d6d6d6;
+	display:block;
+	float:left;
+	margin-right:5px;
+	width:43px;
+	height:43px;
+	border-radius:20px;
+	text-align:center;
+	line-height:43px;
+
+	transition: 0.3s;
+}
+
+
+.round:hover{
+	color:#FFF;
+	background-color:#52c3f1;
+	
+}
+
+.roundon{
+	background-color:#52c3f1;
+	
+}
+
+
+.pager{
+	width:100%;
+	height:auto;
+	text-align:right;
+	font-size:13px;
+	color:#959595;
+	text-decoration:none;
+	line-height:20px;
+    clear:both;
+}
+
+
+.pager a{
+	padding:3px;
+	font-size:13px;
+	color:#959595;
+	text-decoration:none;
+	line-height:20px;
+}
+
+.pager a:hover{
+	color:#52c3f1;
+	text-decoration:underline;
+	
+}
+
+
+.pager .pagebtn{
+	background-color:#52c3f1;
+	color:#FFF;
+}
+
+
+.pager .pagebtn:hover{
+	color:#FFF;
+	text-decoration:underline;
+}
