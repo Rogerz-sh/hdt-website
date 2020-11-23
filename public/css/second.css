@@ -244,92 +244,92 @@
 }
 
 #psh{
-	background-image:url(../pics/maplabel2.png);
+	background-image:url(../images/maplabel2.png);
 }
 
 #psh:hover{
-	background-image:url(../pics/mapaddrsh.png);
+	background-image:url(../images/mapaddrsh.png);
 	z-index:20;
 }
 
 
 #pbj{
-	background-image:url(../pics/maplabel1.png);
+	background-image:url(../images/maplabel1.png);
 	
 }
 
 #pbj:hover{
-	background-image:url(../pics/mapaddrbj.png);
+	background-image:url(../images/mapaddrbj.png);
 	z-index:20;
 }
 
 
 #pgz{
 	
-	background-image:url(../pics/maplabel1.png);
+	background-image:url(../images/maplabel1.png);
 	
 }
 #pgz:hover{
-	background-image:url(../pics/mapaddrgz.png);
+	background-image:url(../images/mapaddrgz.png);
 	z-index:20;
 }
 
 #pkm{
 	
-	background-image:url(../pics/maplabel3.png);
+	background-image:url(../images/maplabel3.png);
 	
 }
 #pkm:hover{
-	background-image:url(../pics/mapaddrkm.png);
+	background-image:url(../images/mapaddrkm.png);
 	z-index:20;
 }
 
 #pcd{
 	
-	background-image:url(../pics/maplabel3.png);
+	background-image:url(../images/maplabel3.png);
 	
 }
 #pcd:hover{
-	background-image:url(../pics/mapaddrcd.png);
+	background-image:url(../images/mapaddrcd.png);
 	z-index:20;
 }
 
 #pwh{
 	
-	background-image:url(../pics/maplabel3.png);
+	background-image:url(../images/maplabel3.png);
 	
 }
 #pwh:hover{
-	background-image:url(../pics/mapaddrwh.png);
+	background-image:url(../images/mapaddrwh.png);
 	z-index:20;
 }
 
 #pnj{
 	
-	background-image:url(../pics/maplabel3.png);
+	background-image:url(../images/maplabel3.png);
 	z-index:30;
 }
 #pnj:hover{
-	background-image:url(../pics/mapaddrnj.png);
+	background-image:url(../images/mapaddrnj.png);
 	z-index:30;
 }
 
 #phz{
 	
-	background-image:url(../pics/maplabel3.png);
+	background-image:url(../images/maplabel3.png);
 	z-index:40;
 }
 #phz:hover{
-	background-image:url(../pics/mapaddrhz.png);
+	background-image:url(../images/mapaddrhz.png);
 	z-index:40;
 }
 
 #pxm{
 	
-	background-image:url(../pics/maplabel3.png);
+	background-image:url(../images/maplabel3.png);
 	z-index:40;
 }
 #pxm:hover{
-	background-image:url(../pics/mapaddrxm.png);
+	background-image:url(../images/mapaddrxm.png);
 	z-index:40;
 }

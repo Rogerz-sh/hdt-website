@@ -1,0 +1,68 @@
+<div class="contentwrapper">
+    <div class="navigator">首页&nbsp;&nbsp;<img
+            src="/images/navidot.png" width="8"
+            height="9">&nbsp;&nbsp;关于我们&nbsp;&nbsp;<img
+            src="/images/navidot.png" width="8"
+            height="9">&nbsp;&nbsp;管理团队&nbsp;&nbsp;</div>
+    <div class="content">
+        <div class="leftcolumn manager">
+            <div class="managericons">
+                <img src="/images/photo_small1.jpg" width="141"
+                    height="141" id="detail1" class="icons iconshow" />
+                <img src="/images/photo_small4.jpg" width="141"
+                    height="141" id="detail2" class="icons" />
+                <img src="/images/photo_small2.jpg" width="141"
+                    height="141" id="detail3" class="icons" />
+            </div>
+            <div id="mdetail1" class="managerdetail" style="display:block">
+                <img src="/images/photo_1.jpg" width="30%"
+                    class="managerphoto" />
+                <ul class="managercontent">
+                    <li class="managertitle">互动通传媒集团创始人&nbsp;&nbsp;<font class="blue">郑斌</font>
+                    </li>
+                    <li class="managerhistory">1999年创立互动通传媒集团</li>
+                    <li class="managerhistory">拥有复旦大学计算机科学技术和国际政治学士学位</li>
+                    <li class="managerhistory">超过20年服务于跨国集团和大型企业的销售和市场管理经验</li>
+                </ul>
+            </div>
+            <div id="mdetail2" class="managerdetail">
+                <img src="/images/photo_4.jpg" width="30%"
+                    class="managerphoto" />
+                <ul class="managercontent">
+                    <li class="managertitle">互动通传媒集团首席执行官&nbsp;&nbsp;<font class="blue">程浩然</font>
+                    </li>
+                    <li class="managerhistory">君创资本管理合伙人，专注传媒和文娱创投领域产业</li>
+                    <li class="managerhistory">中南财经政法大学会计学硕士</li>
+
+                </ul>
+            </div>
+            <div id="mdetail3" class="managerdetail">
+                <img src="/images/photo_2.jpg" width="30%"
+                    class="managerphoto" />
+                <ul class="managercontent">
+                    <li class="managertitle">互动通传媒集团总裁&nbsp;&nbsp;<font class="blue">邓广梼</font>
+                    </li>
+                    <li class="managerhistory">澳洲、香港及国内从事传播专业四十余年</li>
+                    <li class="managerhistory">北京大学新闻与传播学院外聘教师</li>
+                    <li class="managerhistory">北京大学新媒体营销传播(CCM)研究中心研究员</li>
+                    <li class="managerhistory">北京大学传播学博士</li>
+                    <li class="managerhistory">曾任职CitiAd、澳洲Mojo/MDA、形象工厂（Image
+                        Factory）、<br />北京智威汤逊广告公司（JWT）、灵狮广告公司（Lowe Worldwide）</li>
+                </ul>
+            </div>
+
+            <script language="javascript">
+                $(function () {
+                    $(".icons").mouseover(function (e) {
+                        $(".managerdetail").hide();
+                        $(".icons").removeClass("iconshow");
+                        $("#m" + $(this).attr("id")).fadeIn(100);
+                        $(this).addClass("iconshow");
+                    });
+                });
+
+            </script>
+        </div>
+        {{>about_right}}
+    </div>
+</div>

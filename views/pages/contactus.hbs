@@ -1,0 +1,66 @@
+<div class="contentwrapper">
+    <div class="navigator">首页&nbsp;&nbsp;<img
+            src="/images/navidot.png" width="8"
+            height="9">&nbsp;&nbsp;关于我们&nbsp;&nbsp;<img
+            src="/images/navidot.png" width="8"
+            height="9">&nbsp;&nbsp;联系我们&nbsp;&nbsp;</div>
+    <div class="content">
+        <div class="leftcolumn introduce">
+            <div class="addressmap">
+                <a href="#" class="mappoint" id="pbj"></a>
+                <a href="#" class="mappoint" id="psh"></a>
+                <a href="#" class="mappoint" id="pgz"></a>
+                <a href="#" class="mappoint1" id="pkm"></a>
+                <a href="#" class="mappoint1" id="pcd"></a>
+
+                <a href="#" class="mappoint1" id="pnj"></a>
+                <a href="#" class="mappoint1" id="phz"></a>
+
+                <img src="/images/map.jpg" width="758"
+                    height="564" />
+
+            </div>
+
+
+            <script language="javascript">
+                $(function () {
+                    SetDot();
+                    $(window).bind("resize", SetDot);
+                    $("#psh").mouseover(function () {
+                        $("#pnj").css("display", "none");
+
+                    });
+                    $("#psh").mouseleave(function () {
+                        $("#pnj").css("display", "block");
+
+                    });
+                    $("#psh").mouseover(function () {
+                        $("#phz").css("display", "none");
+
+                    });
+                    $("#psh").mouseleave(function () {
+                        $("#phz").css("display", "block");
+
+                    });
+                });
+
+                function SetDot() {
+                    var w = $(".addressmap").width();
+                    var h = $(".addressmap").height();
+                    //$(".mappoint").css("width",w*0.329).css("height",h*0.256);
+                    $("#pbj").css("margin-left", 288).css("margin-top", 56);
+                    $("#psh").css("margin-left", 401).css("margin-top", 202);
+                    $("#pgz").css("margin-left", 203).css("margin-top", 413);
+                    $("#pkm").css("margin-left", 10).css("margin-top", 360);
+                    $("#pcd").css("margin-left", 88).css("margin-top", 250);
+                    $("#pnj").css("margin-left", 428).css("margin-top", 230);
+                    $("#phz").css("margin-left", 440).css("margin-top", 255);
+
+                }
+
+            </script>
+        </div>
+        {{>about_right}}
+
+    </div>
+</div>

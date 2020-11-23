@@ -1,0 +1,63 @@
+<style>
+    .parenterbox {
+        display: none;
+    }
+    .parenterbox.active {
+        display: block;
+    }
+</style>
+<div class="contentwrapper">
+    <div class="navigator">首页&nbsp;&nbsp;<img src="/images/navidot.png" width="8"
+            height="9">&nbsp;&nbsp;合作伙伴&nbsp;&nbsp;</div>
+    <div class="content">
+        <div class="leftcolumn">
+            <div class="taglist" style="width:59%">
+                <a href="javascript:void(0)" data-target="0" class="tag tagon">媒体伙伴</a>
+                <a href="javascript:void(0)" data-target="1" class="tag">广告主伙伴</a>
+                <a href="javascript:void(0)" data-target="2" class="tag">代理商伙伴</a>
+                <a href="javascript:void(0)" data-target="3" class="tag">第三方伙伴</a>
+            </div>
+            <div class="parenterbox active">
+                <div class="partenerword">
+                    hdtMEDIA与国内最优质的数字媒体保持长期深入的合作，媒体资源跨越PC、手机、Pad等所有数字媒体平台，覆盖各平台的门户资源和超过万家的垂直资源，受众覆盖95%以上的中国网民。</div>
+                <div class="partenerlist">
+                    <img src="/images/6-1.jpg" width="100%" />
+                </div>
+            </div>
+            <div class="parenterbox">
+                <div class="partenerword">
+                    hdtMEDIA秉承专业、创新、有效，长期服务各行业品牌广告主，致力为广告主提供技术最领先的互联网广告投放平台，最节约成本、最快速执行、最有效的互联网媒体整合投放解决方案。历经十余年沉淀，我们已为超过5000家广告主，包括85%的世界500强提供服务。</div>
+                <div class="partenerlist">
+                    <img src="/images/client-list.jpg" width="100%" />
+                </div>
+            </div>
+            <div class="parenterbox">
+                <div class="partenerword">
+                    hdtMEDIA与国际及本土代理商，包括知名国际集团紧密合作，为客户提供完善的数字广告营销服务。</div>
+                <div class="partenerlist">
+                    <img src="/images/6-3.jpg" width="100%" />
+                </div>
+            </div>
+            <div class="parenterbox">
+                <div class="partenerword">
+                    hdtMEDIA是国内首个与第三方独立数据调研机构合作的数字广告平台，为广告主提供公正、专业、务实的投放数据及效果报告。</div>
+                <div class="partenerlist">
+                    <img src="/images/6-4.jpg" width="100%" />
+                </div>
+            </div>
+
+        </div>
+        {{>contact_right}}
+    </div>
+    <script>
+        $(function () {
+            $('.taglist').delegate('a[data-target]', 'click', function () {
+                var target = $(this).data('target') - 0;
+                $(this).siblings().removeClass('tagon');
+                $(this).addClass('tagon');
+                $('.parenterbox').hide();
+                $('.parenterbox').eq(target).show();
+            })
+        })
+    </script>
+</div>

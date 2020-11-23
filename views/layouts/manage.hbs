@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit" />
+    <meta name="accountId" content="{{session._id}}" />
+    <meta name="accountName" content="{{session.username}}" />
+    <meta name="accountNickname" content="{{session.nickname}}" />
+    <meta name="accountShop" content="{{session.shop_id}}" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/hdt_manage/css/bulma.min.css" />
+    <link rel="stylesheet" href="/hdt_manage/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/hdt_manage/css/animate.min.css" />
+    <link rel="stylesheet" href="/hdt_manage/css/font-awesome.min.css" />
+    <link href="/hdt_manage/css/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="/hdt_manage/css/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link href="/hdt_manage/css/plugins.css" rel="stylesheet" />
+    <link href="/hdt_manage/css/style.css" rel="stylesheet" />
+    <script src="/hdt_manage/js/axios.min.js"></script>
+    <script src="/hdt_manage/js/jquery.min.js"></script>
+    <script src="/hdt_manage/js/jquery.cookie.js"></script>
+    <script src="/hdt_manage/js/bootstrap.min.js"></script>
+    <script src="/hdt_manage/js/jszip.min.js"></script>
+    <script src="/hdt_manage/js/kendo.all.min.js"></script>
+    <script src="/hdt_manage/js/kendo.culture.zh-CN.min.js"></script>
+    <script src="/hdt_manage/js/kendo.messages.zh-CN.min.js"></script>
+    <script src="/hdt_manage/js/underscore.min.js"></script>
+    <script src="/hdt_manage/js/vue.min.js"></script>
+    <script src="/hdt_manage/js/vue.component.js"></script>
+    <script type="text/javascript" src="/hdt_manage/scripts/layout.layout.js"></script>
+</head>
+
+<body>
+    <!-- 装载容器 -->
+    <div class="loading-container loading-inactive">
+        <div class="spinner">
+            <div class="spinner-container container1">
+                <div class="circle1">
+                </div>
+                <div class="circle2">
+                </div>
+                <div class="circle3">
+                </div>
+                <div class="circle4">
+                </div>
+            </div>
+            <div class="spinner-container container2">
+                <div class="circle1">
+                </div>
+                <div class="circle2">
+                </div>
+                <div class="circle3">
+                </div>
+                <div class="circle4">
+                </div>
+            </div>
+            <div class="spinner-container container3">
+                <div class="circle1">
+                </div>
+                <div class="circle2">
+                </div>
+                <div class="circle3">
+                </div>
+                <div class="circle4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  /装载容器 -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">HDTMedia</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/manage/news">新闻管理</a></li>
+                            <li><a href="/manage/examples">案例管理</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/account/account-logout?type=business">退出登录</a></li>
+                            <li><a id="editPassword">修改密码</a></li>
+                            {{!-- <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">设置 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">修改密码</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">系统日志</a></li>
+                                </ul>
+                            </li> --}}
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        <div id="vueEL">{{{body}}}</div>
+    </div>
+    <script type="text/javascript" src="/hdt_manage/js/hdtjs/prototype.js"></script>
+    <script type="text/javascript" src="/hdt_manage/js/hdtjs/ajax.js"></script>
+    <script type="text/javascript" src="/hdt_manage/js/hdtjs/dialog.js"></script>
+    <script type="text/javascript" src="/hdt_manage/js/hdtjs/form.js"></script>
+</body>
+
+</html>
