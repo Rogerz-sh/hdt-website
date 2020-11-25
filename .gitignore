@@ -1,3 +1,4 @@
 node_modules
-public/images/intro.mp4
+public/images/*.mp4
 config.js
+public/upload

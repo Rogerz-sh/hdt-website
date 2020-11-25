@@ -230,3 +230,157 @@
 .indexnewswrapper .newsblock .detail .newsbanner .dots .blue{
     background-image: url('../images/dotblue.png');
 }
+
+.idx-news {
+    margin-top: 100px;
+}
+
+.idx-news-top {
+	background: url(../images/idx_news.jpg) center center no-repeat;
+	background-size: cover;
+	padding: 110px 0;
+}
+
+.idx-news-top .tit {
+	background: rgba(0, 0, 0, 0.5);
+	width: 270px;
+	margin: 0 auto;
+	padding: 25px 0;
+	border: 1px solid #727779;
+}
+
+.idx-news-top .tit h2,
+.idx-news-top .tit span {
+	color: #fff;
+}
+
+.tit h2 {
+    font-size: 32px;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.figure_img,
+.figure_img1,
+.figure_img2,
+.figure_img3,
+.figure_img4,
+.figure_img5 {
+	position: relative;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	margin: 0;
+	padding-bottom: 75%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.figure_img1 {
+	padding-bottom: 65%;
+}
+
+.figure_img2 {
+	padding-bottom: 55%;
+}
+
+.figure_img3 {
+	padding-bottom: 50%;
+}
+
+.figure_img4 {
+	padding-bottom: 50%;
+}
+
+.figure_img5 {
+	padding-bottom: 100%;
+}
+
+.idx-news-news {
+	position: relative;
+	overflow: hidden;
+	max-width: 1500px;
+	margin: 0 auto;
+    padding: 100px 150px;
+    box-sizing: border-box;
+}
+
+.idx-news-news .swiper-container {
+	margin: 0 auto;
+}
+
+.idx-news-news .s-prev,
+.idx-news-news .s-next {
+	position: absolute;
+	top: 45%;
+	background-size: 100%;
+	width: 64px;
+	height: 64px;
+	cursor: pointer;
+}
+
+.idx-news-news .s-prev {
+	background: url(/images/icon_left.png) no-repeat;
+	left: 20px;
+}
+
+.idx-news-news .s-next {
+	background: url(/images/icon_right.png) no-repeat;
+	right: 20px;
+}
+
+.idx-news-news .swiper-slide {
+	border-bottom: 1px solid #e9e9e9;
+	padding-bottom: 35px;
+	position: relative;
+}
+
+.idx-news-news .swiper-slide::after {
+	content: "";
+	background: #e9e9e9;
+	transition: 1s;
+	width: 0;
+	height: 1px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.idx-news-news .swiper-slide:hover:after {
+	background: #399439;
+	width: 100%;
+	height: 1px;
+}
+
+.idx-news-news .swiper-slide h3 {
+	font-size: 16px;
+	color: #000000;
+	padding-top: 30px;
+	margin-bottom: 15px;
+	height: 68px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.5em;
+}
+
+.idx-news-news .swiper-slide p {
+	font-size: 14px;
+	color: #666666;
+	margin-bottom: 20px;
+	overflow: hidden;
+	height: 48px;
+}
+
+.idx-news-news .swiper-slide span {
+	font-size: 14px;
+	color: #38a2f6;
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+}

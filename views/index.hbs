@@ -1,3 +1,5 @@
+<link href="/css/swiper.min.css" rel="stylesheet" />
+<script language="JavaScript" src="/js/swiper.min.js"></script>
 <div class="indexbanner">
     <div class="indexbannercontrol">
         <a href="#" id="bannerleft"></a>
@@ -21,7 +23,7 @@
                 src="http://www.hdtmedia.com/wp-content/uploads/2018/03/hdtKOL1.jpg" width="100%" /></a>
     </div>
 </div>
-<div class="indexnewswrapper">
+{{!-- <div class="indexnewswrapper">
     <div class="allnews">
         <div class="newsblock">
 
@@ -69,4 +71,123 @@
             <a href="/archives/category/allwork/newworks/通信电器" class="btnmore" target="_blank"></a>
         </div>
     </div>
+</div> --}}
+<div class="idx-news">
+    <div class="idx-news-top">
+        <div class="tit">
+            <h2>新闻动态</h2>
+        </div>
+    </div>
+
+    <!-- 新闻轮播 -->
+    <div class="idx-news-news">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {{#each news_list}}
+                <div class="swiper-slide">
+                    <a target="_blank" href="{{link}}">
+                        <div class="figure_img"
+                            style="background-image: url({{cover}});">
+                        </div>
+                        <div class="s-b">
+                            <h3>{{title}}</h3>
+                            <p>{{content}}...</p>
+                            <span>了解详情</span>
+                        </div>
+                    </a>
+                </div>
+                {{/each}}
+                {{!-- <div class="swiper-slide">
+                    <a target="_blank" href="http://www.hdtmedia.com/archives/12663">
+                        <div class="figure_img"
+                            style="background-image: url(http://www.hdtmedia.com/wp-content/uploads/2020/04/12.png);">
+                        </div>
+                        <div class="s-b">
+                            <h3>2020领导者说|互动通副总裁朱强：认准风口，顺势而为！</h3>
+                            <p>2020年也许并不轻松，但同样充满机遇，看清局势认准风口，不要让机会从手中溜走！...</p>
+                            <span>了解详情</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="http://www.hdtmedia.com/archives/12659">
+                        <div class="figure_img"
+                            style="background-image: url(http://www.hdtmedia.com/wp-content/uploads/2020/04/11.png);">
+                        </div>
+                        <div class="s-b">
+                            <h3>任何阶段的品牌都应建立危机管理响应机制</h3>
+                            <p>保持危机意识很重要，居安思危、未雨绸缪是我们工作中不可或缺的品牌思维。...</p>
+                            <span>了解详情</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="http://www.hdtmedia.com/archives/12656">
+                        <div class="figure_img"
+                            style="background-image: url(http://www.hdtmedia.com/wp-content/uploads/2020/04/2.png);">
+                        </div>
+                        <div class="s-b">
+                            <h3>互动通获上海市广告协会颁发两项荣誉</h3>
+                            <p>1月16日，互动通荣获上海市广告协会颁发的两项荣誉：互动通传媒集团荣获2019年度表彰单位，互动通传媒集团总裁邓广梼（Michael
+                        Tang）博士荣获2019年度表彰个人！...</p>
+                            <span>了解详情</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="http://www.hdtmedia.com/archives/12614">
+                        <div class="figure_img"
+                            style="background-image: url(http://www.hdtmedia.com/wp-content/uploads/2019/12/81.jpg);">
+                        </div>
+                        <div class="s-b">
+                            <h3>新环境，新征程——互动通搬家啦！</h3>
+                            <p>新环境中的互动通，将以全新的面貌，开启新的征程！...</p>
+                            <span>了解详情</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a target="_blank" href="http://www.hdtmedia.com/archives/12575">
+                        <div class="figure_img"
+                            style="background-image: url(http://www.hdtmedia.com/wp-content/uploads/2019/12/14.jpg);">
+                        </div>
+                        <div class="s-b">
+                            <h3>Morketing Summit 2019，共话破局</h3>
+                            <p>11月29日，第三届Morketing
+                        Summit全球营销峰会在北京国贸大酒店举行，本届主题围绕“破·局”展开。在第二日的主会场，数十位嘉宾以“突破棋局”为主题，共同分享他们对于新品牌、中国式创新、5G、营销与增长以及技术和创意等相关领域观点。...</p>
+                            <span>了解详情</span>
+                        </div>
+                    </a>
+                </div> --}}
+
+            </div>
+        </div>
+        <div class="s-prev"></div>
+        <div class="s-next"></div>
+    </div>
+    <!-- 新闻轮播 end-->
 </div>
+<script language="javascript">
+    $(function () {
+        var w = window.screen.width;
+        if (w > 767) {
+            var mySwiper = new Swiper('.swiper-container', {
+                slidesPerView: 3,
+                centeredSlides: false,
+                spaceBetween: 20,
+                prevButton: '.s-prev',
+                nextButton: '.s-next',
+                autoplay: 4000,
+            })
+        } else {
+            var mySwiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                centeredSlides: false,
+                spaceBetween: 20,
+                prevButton: '.s-prev',
+                nextButton: '.s-next',
+                autoplay: 4000,
+            })
+        }
+    })
+</script>

@@ -7,6 +7,7 @@ const path = require('path');
 
 const Account = require('../model/account')
 const Article = require('../model/article')
+const Picture = require('../model/picture')
 
 /* GET users listing. */
 router.get('/_?(login)?', function (req, res, next) {
@@ -55,9 +56,16 @@ router.get('/news-modify', (req, res) => {
   })
 })
 
+router.get('/pictures', (req, res) => {
+  res.render('manage/pictures', {
+    title: '图片管理',
+    layout: 'layouts/manage'
+  })
+})
+
 router.get('/json-news-list', async (req, res) => {
   try {
-    let query = req.query.query || {}, limit = +req.query.take || 10, skip = +req.query.skip, where = {};
+    let query = req.query.query || {}, limit = +req.query.take || 10, skip = +req.query.skip, where = { is_deleted: 0 };
     if (query.title) {
       where['title'] = new RegExp(query.title, 'g');
     }
@@ -77,6 +85,20 @@ router.get('/json-news-list', async (req, res) => {
   }
 })
 
+router.get('/json-news-detail', async (req, res) => {
+  try {
+    let id = req.query.id;
+    let article = await Article.findOne({ _id: id, is_deleted: 0 }).exec();
+    if (article) {
+      tool.successHandler(res, article);
+    } else {
+      tool.errorHandler(res, 'article is no exists');
+    }
+  } catch (err) {
+    tool.errorHandler(res, err);
+  }
+})
+
 router.post('/save-article', async (req, res) => {
   try {
     let id = req.body.id, article = JSON.parse(unescape(req.body.article));
@@ -86,6 +108,50 @@ router.post('/save-article', async (req, res) => {
       let newObj = new Article(article);
       await newObj.save();
     }
+    tool.successHandler(res, 'success');
+  } catch (err) {
+    tool.errorHandler(res, err);
+  }
+})
+
+router.get('/json-picture-list', async (req, res) => {
+  try {
+    let query = req.query.query || {}, limit = +req.query.take || 10, skip = +req.query.skip, where = { is_deleted: 0 };
+    if (query.sdate) {
+      if (!where['created_at']) where['created_at'] = {}
+      where['created_at']['$gte'] = query.sdate + ' 00:00:00';
+    }
+    if (query.edate) {
+      if (!where['created_at']) where['created_at'] = {}
+      where['created_at']['$lte'] = query.edate + ' 23:59:59';
+    }
+    let pictures = await Picture.find(where).skip(skip).limit(limit).sort({ created_at: -1 }).exec();
+    let count = await Picture.count(where).exec();
+    tool.successHandler(res, { 'total': count, 'result': pictures })
+  } catch (err) {
+    tool.errorHandler(res, err);
+  }
+})
+
+router.post('/save-picture', async (req, res) => {
+  try {
+    let pic = JSON.parse(unescape(req.body.pic));
+    if (pic.filename && pic.filepath) {
+      let newObj = new Picture(pic);
+      await newObj.save();
+      tool.successHandler(res, 'success');
+    } else {
+      tool.errorHandler(res, 'picture info invaild');
+    }
+  } catch (err) {
+    tool.errorHandler(res, err);
+  }
+})
+
+router.post('/remove-picture', async (req, res) => {
+  try {
+    let id = req.body.id;
+    await Picture.findByIdAndUpdate(id, { $set: { is_deleted: 1 } }).exec();
     tool.successHandler(res, 'success');
   } catch (err) {
     tool.errorHandler(res, err);

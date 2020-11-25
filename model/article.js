@@ -7,7 +7,7 @@ const articleSchema = new mongoose.Schema({
     subtitle: { type: String },
     cover: { type: String },
     content: { type: String },
-    publish_date: { type: Number, default: 1 },
+    publish_date: { type: Number, default: Date.now() },
     is_deleted: { type: Number, default: 0 }
 }, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } });
 

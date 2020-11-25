@@ -50,12 +50,15 @@ $(function () {
         scrollable: false,
         pageable: true,
         columns: [
+            { field: 'cover', title: '封面', template: '<img src="#:cover#" width="200" style="max-height:100px;">', width: 230 },
             { field: 'title', title: '标题', template: getTitle },
-            { field: 'publish_date', title: '发布时间' }
+            { field: 'publish_date', title: '显示时间', template: '#:new Date(publish_date).format("yyyy-mm-dd")#', width: 100 },
+            { field: 'created_at', title: '发布时间', template: '#:new Date(created_at).format("yyyy-mm-dd hh:MM")#', width: 150 },
+            { title: '操作', template: '<a href="/manage/news-modify?id=#:_id#" class="btn btn-sm btn-info"><i class="fa fa-edit"></i> 编辑</a>', width: 80 }
         ]
     }).data('kendoGrid');
 
     function getTitle(item) {
-        return `${item.title}`
+        return `<a href="/news-detail/${item._id}" target="_blank">${item.title}</a>`
     }
 });
