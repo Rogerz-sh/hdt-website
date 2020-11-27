@@ -1,0 +1,39 @@
+<div class="contentwrapper">
+    <div class="navigator">首页&nbsp;&nbsp;<img
+            src="/images/navidot.png" width="8"
+            height="9">&nbsp;&nbsp;精彩案例&nbsp;&nbsp;<img
+            src="/images/navidot.png" width="8"
+            height="9">&nbsp;&nbsp;案例作品集&nbsp;&nbsp;</div>
+    <div class="content">
+        <div class="leftcolumn">
+
+            <div class="newscontent">
+                <div class="newstitle">{{work.title}}</div>
+                <div class="subjectdetail">
+                    <br />
+                    <video id="vdo1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto"
+                        width="650" height="366"
+                        poster="{{work.cover}}" data-setup="{}">
+                        <source src="{{work.content}}"
+                            type="video/mp4" />
+                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading
+                            to a web browser that <a href="http://videojs.com/html5-video-support/"
+                                target="_blank">supports HTML5 video</a></p>
+                    </video>
+
+                    <script>
+                        videojs.options.flash.swf = "http://tx.hdtmedia.com/wp-content/themes/hdtmedia/assets/swf/video-js.swf";
+                    </script>
+                    <br /><br />
+
+                    <p>
+                        <center></center>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+        {{>contact_right}}
+    </div>
+</div>

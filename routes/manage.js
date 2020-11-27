@@ -7,6 +7,7 @@ const path = require('path');
 
 const Account = require('../model/account')
 const Article = require('../model/article')
+const Example = require('../model/example')
 const Picture = require('../model/picture')
 
 /* GET users listing. */
@@ -56,6 +57,20 @@ router.get('/news-modify', (req, res) => {
   })
 })
 
+router.get('/example', (req, res) => {
+  res.render('manage/example', {
+    title: '案例管理',
+    layout: 'layouts/manage'
+  })
+})
+
+router.get('/example-modify', (req, res) => {
+  res.render('manage/example-modify', {
+    title: '案例管理',
+    layout: 'layouts/manage'
+  })
+})
+
 router.get('/pictures', (req, res) => {
   res.render('manage/pictures', {
     title: '图片管理',
@@ -70,12 +85,12 @@ router.get('/json-news-list', async (req, res) => {
       where['title'] = new RegExp(query.title, 'g');
     }
     if (query.sdate) {
-      if (!where['created_at']) where['created_at'] = {}
-      where['created_at']['$gte'] = query.sdate + ' 00:00:00';
+      if (!where['publish_date']) where['publish_date'] = {}
+      where['publish_date']['$gte'] = new Date(query.sdate + ' 00:00:00').getTime();
     }
     if (query.edate) {
-      if (!where['created_at']) where['created_at'] = {}
-      where['created_at']['$lte'] = query.edate + ' 23:59:59';
+      if (!where['publish_date']) where['publish_date'] = {}
+      where['publish_date']['$lte'] = new Date(query.edate + ' 23:59:59').getTime();
     }
     let news_list = await Article.find(where).skip(skip).limit(limit).sort({ created_at: -1 }).exec();
     let count = await Article.count(where).exec();
@@ -113,6 +128,58 @@ router.post('/save-article', async (req, res) => {
     tool.errorHandler(res, err);
   }
 })
+
+router.get('/json-example-list', async (req, res) => {
+    try {
+      let query = req.query.query || {}, limit = +req.query.take || 10, skip = +req.query.skip, where = { is_deleted: 0 };
+      if (query.title) {
+        where['title'] = new RegExp(query.title, 'g');
+      }
+      if (query.sdate) {
+        if (!where['publish_date']) where['publish_date'] = {}
+        where['publish_date']['$gte'] = new Date(query.sdate + ' 00:00:00').getTime();
+      }
+      if (query.edate) {
+        if (!where['publish_date']) where['publish_date'] = {}
+        where['publish_date']['$lte'] = new Date(query.edate + ' 23:59:59').getTime();
+      }
+      let examples = await Example.find(where).skip(skip).limit(limit).sort({ created_at: -1 }).exec();
+      let count = await Example.count(where).exec();
+      tool.successHandler(res, { 'total': count, 'result': examples })
+    } catch (err) {
+      tool.errorHandler(res, err);
+    }
+  })
+  
+  router.get('/json-example-detail', async (req, res) => {
+    try {
+      let id = req.query.id;
+      let example = await Example.findOne({ _id: id, is_deleted: 0 }).exec();
+      if (example) {
+        tool.successHandler(res, example);
+      } else {
+        tool.errorHandler(res, 'example is no exists');
+      }
+    } catch (err) {
+      tool.errorHandler(res, err);
+    }
+  })
+  
+  router.post('/save-example', async (req, res) => {
+    try {
+      let id = req.body.id, example = JSON.parse(unescape(req.body.example));
+      if (id) {
+        await Example.findByIdAndUpdate(id, { $set: example }).exec();
+      } else {
+        let newObj = new Example(example);
+        await newObj.save();
+      }
+      tool.successHandler(res, 'success');
+    } catch (err) {
+      tool.errorHandler(res, err);
+    }
+  })
+  
 
 router.get('/json-picture-list', async (req, res) => {
   try {
@@ -168,6 +235,27 @@ router.post('/upload-file', (req, res) => {
     let path = files.file.path.split('public')[1];
     tool.successHandler(res, path);
   });
+});
+
+router.post('/edit-user-password', async (req, res) => {
+  try {
+      let user = req.session.account, password_old = unescape(req.body.password_old), password_new = unescape(req.body.password_new);
+      let account = await Account.findById(user._id).exec();
+      if (account.password === password_old || account.password == tool.md5(password_old)) {
+          account.password = tool.md5(password_new);
+          await account.save();
+          tool.successHandler(res, 1);
+      } else {
+          tool.errorHandler(res, '原密码不正确');
+      }
+  } catch (err) {
+      tool.errorHandler(res, '操作失败');
+  }
+})
+
+router.get('/user-logout', function (req, res) {
+  req.session.destroy();
+  res.redirect('/manage/login');
 });
 
 module.exports = router;

@@ -2,3 +2,4 @@ node_modules
 public/images/*.mp4
 config.js
 public/upload
+public/examples

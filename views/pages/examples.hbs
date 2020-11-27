@@ -16,92 +16,28 @@
                             href="/archives/category/allwork/newworks/其他/?id=40" class="tag">其他</a>
                     </div> --}}
             <div class="anlilist">
+                {{#each examples}}
+                {{#if odd}}
                 <div class="anlisingle">
-                    <a href="http://www.hdtmedia.com/archives/11436"><img
-                            src="http://www.hdtmedia.com/wp-content/uploads/2017/11/2.jpg" width="476" height="302"
-                            class="anlipic"></a>
-                    <a href="http://www.hdtmedia.com/archives/11436" class="anlititle">卓悦服务，OTV程序化视频有效提升奥迪品牌 |
-                        2017年11月 上传</a>
+                    <a href="{{link}}">
+                        <img src="{{cover}}" width="476" height="302" class="anlipic">
+                    </a>
+                    <a href="{{link}}" class="anlititle">{{title}} | {{date}} 上传</a>
                 </div>
+                {{else}}
                 <div class="anlisingleo">
-                    <a href="http://www.hdtmedia.com/archives/10160"><img
-                            src="http://www.hdtmedia.com/wp-content/uploads/2017/02/优62.png" width="476" height="302"
-                            class="anlipic"></a>
-                    <a href="http://www.hdtmedia.com/archives/10160" class="anlititle">DMP助力东风裕隆大数据营销 | 2017年02月
-                        上传</a>
+                    <a href="{{link}}">
+                        <img src="{{cover}}" width="476" height="302" class="anlipic">
+                    </a>
+                    <a href="{{link}}" class="anlititle">{{title}} | {{date}} 上传</a>
                 </div>
                 <hr class="line" />
-                <div class="anlisingle">
-                    <a href="http://www.hdtmedia.com/archives/8003"><img
-                            src="http://www.hdtmedia.com/wp-content/uploads/2016/05/14.png" width="476" height="302"
-                            class="anlipic"></a>
-                    <a href="http://www.hdtmedia.com/archives/8003" class="anlititle">Volvo S60L：心强大，才能力从容 |
-                        2016年05月 上传</a>
-                </div>
-                <div class="anlisingleo">
-                    <a href="http://www.hdtmedia.com/archives/6054"><img
-                            src="http://www.hdtmedia.com/wp-content/uploads/2015/08/17.jpg" width="476" height="302"
-                            class="anlipic"></a>
-                    <a href="http://www.hdtmedia.com/archives/6054" class="anlititle">雷克萨斯全混动科技NX 300h：不充电，就来电 |
-                        2015年08月 上传</a>
-                </div>
-                <hr class="line" />
-                <div class="anlisingle">
-                    <a href="http://www.hdtmedia.com/archives/1436"><img
-                            src="http://www.hdtmedia.com/wp-content/uploads/2015/01/12.jpg" width="476" height="302"
-                            class="anlipic"></a>
-                    <a href="http://www.hdtmedia.com/archives/1436" class="anlititle">福特嘉年华：音速极客 | 2014年10月
-                        上传</a>
-                </div>
-                <div class="anlisingleo">
-                    <a href="http://www.hdtmedia.com/archives/1618"><img
-                            src="http://www.hdtmedia.com/wp-content/uploads/2015/01/5_副本.jpg" width="476" height="302"
-                            class="anlipic"></a>
-                    <a href="http://www.hdtmedia.com/archives/1618" class="anlititle">福特嘉年华：全城竞速，创造你的加速度！ |
-                        2014年04月 上传</a>
-                </div>
-                <hr class="line" />
-                <div class="anlisingle">
-                    <a href="http://www.hdtmedia.com/archives/1669"><img
-                            src="http://www.hdtmedia.com/wp-content/uploads/2015/01/113.png" width="476" height="302"
-                            class="anlipic"></a>
-                    <a href="http://www.hdtmedia.com/archives/1669" class="anlititle">东南汽车：敢作为，感Turbo | 2014年02月
-                        上传</a>
-                </div>
-                <div class="anlisingleo">
-                    <a href="http://www.hdtmedia.com/archives/1700"><img
-                            src="http://www.hdtmedia.com/wp-content/uploads/2015/01/a-2_副本.png" width="476" height="302"
-                            class="anlipic"></a>
-                    <a href="http://www.hdtmedia.com/archives/1700" class="anlititle">奔驰CLS级猎装车：赏新，悦目 | 2013年12月
-                        上传</a>
-                </div>
-                <hr class="line" />
-                <div class="anlisingle">
-                    <a href="http://www.hdtmedia.com/archives/1709"><img
-                            src="http://www.hdtmedia.com/wp-content/uploads/2015/01/d3.png" width="476" height="302"
-                            class="anlipic"></a>
-                    <a href="http://www.hdtmedia.com/archives/1709" class="anlititle">福特翼虎：开启无尽可能 | 2013年11月
-                        上传</a>
-                </div>
-                <div class="anlisingleo">
-                    <a href="http://www.hdtmedia.com/archives/1722"><img
-                            src="http://www.hdtmedia.com/wp-content/uploads/2015/01/d21.png" width="476" height="302"
-                            class="anlipic"></a>
-                    <a href="http://www.hdtmedia.com/archives/1722" class="anlititle">福特蒙迪欧：科技品味，闪耀人生 | 2013年10月
-                        上传</a>
-                </div>
-                {{!-- <hr class="line" /> --}}
+                {{/if}}
+                {{/each}}
 
 
             </div>
-            {{!-- <div class="pager">
-                <a href="/pages/examples/%E4%BA%A4%E9%80%9A%E8%BF%90%E8%BE%93?id=31&page=1" class="pagebtn">首页</a>
-                <a href="/pages/examples/%E4%BA%A4%E9%80%9A%E8%BF%90%E8%BE%93?id=31&page=0" class="pagebtn">上一页</a>
-                <span>1</span>
-                <a href="/pages/examples/%E4%BA%A4%E9%80%9A%E8%BF%90%E8%BE%93?id=31&page=2">2</a>
-                <a href="/pages/examples/%E4%BA%A4%E9%80%9A%E8%BF%90%E8%BE%93?id=31&page=2" class="pagebtn">下一页</a>
-                <a href="/pages/examples/%E4%BA%A4%E9%80%9A%E8%BF%90%E8%BE%93?id=31&page=2" class="pagebtn">末页</a>
-            </div> --}}
+            {{{pager}}}
         </div>
         {{>example_right}}
     </div>

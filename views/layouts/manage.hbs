@@ -90,11 +90,11 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="/manage/news">新闻管理</a></li>
-                            <li><a href="/manage/examples">案例管理</a></li>
+                            <li><a href="/manage/example">案例管理</a></li>
                             <li><a href="/manage/pictures">图片管理</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/account/account-logout?type=business">退出登录</a></li>
+                            <li><a href="/manage/user-logout">退出登录</a></li>
                             <li><a id="editPassword">修改密码</a></li>
                             {{!-- <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">设置 <span class="caret"></span></a>
@@ -116,5 +116,110 @@
     <script type="text/javascript" src="/hdt_manage/js/hdtjs/dialog.js"></script>
     <script type="text/javascript" src="/hdt_manage/js/hdtjs/form.js"></script>
 </body>
+<script>
+    $(function () {
+        $('#editPassword').click(function () {
+            $.hdtMsg.dialog({
+                title: '修改密码',
+                size: 'sm',
+                destroy: true,
+                content: `<form>
+                <div class="form-group">
+                    <label class="control-label">原密码：</label>
+                    <div>
+                        <input type="password" class="form-control input-sm" id="p_old" placeholder="请输入原密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">新密码：</label>
+                    <div>
+                        <input type="password" class="form-control input-sm" id="p_new1" placeholder="请输入新密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">确认密码：</label>
+                    <div>
+                        <input type="password" class="form-control input-sm" id="p_new2" placeholder="请输入确认密码">
+                    </div>
+                </div>
+            </form>`,
+                footer: {
+                    buttons: [
+                        {
+                            name: 'ok',
+                            handler: function () {
+                                var self = this, dom = self.dom, form = $('form', dom).data('form');
+                                if (form.validate()) {
+                                    var data = form.getFormData();
+                                    $.hdtAjax({
+                                        url: '/manage/edit-user-password',
+                                        type: 'POST',
+                                        dataType: 'json',
+                                        data: { password_old: data.p_old, password_new: data.p_new1 },
+                                        success: function (res) {
+                                            if (res.code == 200) {
+                                                $.hdtMsg.alert('修改成功')
+                                                self.hide();
+                                            } else {
+                                                $.hdtMsg.alert(res.msg)
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                        },
+                        {
+                            name: 'cancel',
+                            handler: function () {
+                                this.hide();
+                            }
+                        }
+                    ]
+                },
+                onLoaded: function () {
+                    var dom = this.dom;
+                    var form = $('form', dom).hdtForm({
+                        controls: [
+                            {
+                                name: 'p_old',
+                                target: '#p_old',
+                                type: 'input',
+                                rules: [
+                                    { rule: 'required', errMsg: '原密码不能为空' }
+                                ]
+                            },
+                            {
+                                name: 'p_new1',
+                                target: '#p_new1',
+                                type: 'input',
+                                rules: [
+                                    { rule: 'required', errMsg: '新密码不能为空' },
+                                    { rule: 'regexp', check: /^[a-zA-Z0-9_]{6,20}$/, errMsg: '密码为6-20个字符，由字母、数字或下划线组成' }
+                                ]
+                            },
+                            {
+                                name: 'p_new2',
+                                target: '#p_new2',
+                                type: 'input',
+                                rules: [
+                                    { rule: 'required', errMsg: '确认密码不能为空' },
+                                    { rule: 'regexp', check: /^[a-zA-Z0-9_]{6,20}$/, errMsg: '密码为6-20个字符，由字母、数字或下划线组成' },
+                                    {
+                                        rule: 'other',
+                                        check: function () {
+                                            return $('#p_new1', dom).val() == $('#p_new2', dom).val();
+                                        },
+                                        errMsg: '确认密码必须与新密码相同'
+                                    }
+                                ]
+                            },
+                        ]
+                    });
+                    $('form', dom).data('form', form);
+                }
+            }).show();
+        });
+    })
+</script>
 
 </html>
