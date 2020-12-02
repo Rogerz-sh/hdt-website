@@ -1,0 +1,632 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem; /* =16px */
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:#5a5a5a;
+    line-height:18px;
+    margin:0px;
+    padding:0px;
+    background-color: #f9f9f9;
+    text-align: center;
+    width:640px;
+    height:auto;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul,li{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+}
+
+img{
+    border: none;
+}
+
+
+.btn{
+    position: absolute;
+    float: left;
+    display: block;
+}
+
+.btn{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.btn:active{
+    opacity: 0.6;
+}
+
+.bluetitle{
+    color: #54b9e3;
+}
+
+
+.head{
+
+}
+
+
+.pages{
+    width:640px;
+    height: auto;
+    position: absolute;
+    display: block;
+    float: left;
+    margin:auto;
+    text-align: left;
+    overflow: hidden;
+}
+
+.segment{
+    margin: 3px;
+}
+
+.head{
+    width: 640px;
+    height: 91px;
+    background-image: url("/wap/images/headback.jpg");
+    text-align: left;
+
+}
+
+.head .logo{
+    width: 166px;
+    height: 28px;
+    position: absolute;
+    margin-left: 38px;
+    margin-top: 33px;
+    background-image: url("/wap/images/logo.png");
+}
+
+.head .btnlanguage {
+    background-image: url("/wap/images/btnlanguage.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 90px;
+    margin-left: 269px;
+    margin-top:0px;
+    position: absolute;
+    width: 138px;
+}
+
+.head .navigation{
+
+    z-index: 100;
+    width: 243px;
+    height: 90px;
+    margin-left: 397px;
+    transition: all 0.5s;
+    overflow: hidden;
+    position: absolute;
+
+}
+
+.head .navigation.on{
+
+    height: 404px;
+
+}
+
+
+.head .navigation .btnnavi{
+    display: block;
+    width: 37px;
+    height: 32px;
+    background-image: url("/wap/images/btnmenu.png");
+    float: right;
+    margin-right: 40px;
+    margin-top: 33px;
+
+}
+
+.head .navigation .submenu{
+    float: right;
+    width: 243px;
+    height: 296px;
+    margin-top: 29px;
+    background-color: #FFFFFF;
+}
+.head .navigation .submenu a{
+    transition: all 0.5s;
+}
+.head .navigation .submenu a:link,.head .navigation .submenu a:visited{
+    display: block;
+    width: 243px;
+    height: 74px;
+    text-align: left;
+    border-left: solid 1px #d7d7d7;
+    border-bottom: solid 1px #d7d7d7;
+    color: #5f5f5f;
+    font-size: 24px;
+
+    padding-top: 20px;
+    padding-left: 45px;
+    text-decoration: none;
+}
+.head .navigation .submenu a:hover{
+    background-color: #ebebeb;
+}
+.head .navigation .submenu a span:before{
+    margin-right:10px;
+    vertical-align:-8px;
+}
+.head .navigation .submenu a .item1:before{
+    content: url("/wap/images/menuicon_1.png");
+}
+
+.head .navigation .submenu a .item2:before{
+    content: url("/wap/images/menuicon_2.png");
+}
+
+.head .navigation .submenu a .item3:before{
+    content: url("/wap/images/menuicon_3.png");
+}
+
+.head .navigation .submenu a .item4:before{
+    content: url("/wap/images/menuicon_4.png");
+}
+
+#wrapper{
+
+    width: 624px;
+    height: 442px;
+    overflow: hidden;
+    padding-left: 12px;
+    padding-right: 8px;
+}
+
+#scroller{
+    width: 608px;
+    height: 442px;
+    overflow: hidden;
+}
+
+#wrapper  ul{
+    width: 3120px;
+    height: 442px;
+
+}
+
+#wrapper  ul li{
+    width: 624px;
+    height: 442px;
+    float: left;
+}
+
+.imgbtns{
+    width: 640px;
+    padding-left: 4px;
+
+}
+
+.imgbtn{
+    display: block;
+    float: left;
+    width: 308px;
+    height: 211px;
+    transition: all 0.5s;
+    margin: 3px;
+}
+
+.imgbtn:active{
+    opacity: 0.5;
+}
+
+.foot{
+    width: 640px;
+    height: 159px;
+    background-image: url("/wap/images/bottomback.jpg");
+    display: block;
+    clear: both;
+    text-align: center;
+    padding-top: 28px;
+}
+
+.foot a{
+    color: #5a5a5a;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+.dotslist{
+    display: block;
+    width: 624px;
+
+    overflow: hidden;
+    padding-left: 281px;
+    padding-right: 8px;
+    position: absolute;
+    margin-top: 407px;
+    text-align: center;
+    z-index: 100;
+
+}
+
+.dot{
+    background-image: url("/wap/images/dotoff.png");
+    width:9px;
+    height: 9px;
+    margin-right: 10px;
+
+    float: left;
+}
+
+.dot.on{
+    background-image: url("/wap/images/doton.png");
+
+}
+
+
+#workswrapper{
+
+    width: 640px;
+    height: 884px;
+    overflow: hidden;
+
+}
+
+#workswrapper #scroller{
+    width: 640px;
+    height: 884px;
+    overflow: hidden;
+}
+
+#workswrapper  ul{
+    width: 4480px;
+    height: 884px;
+
+}
+
+#workswrapper  ul li{
+    width: 640px;
+    height: 884px;
+    float: left;
+}
+
+.workswrapper .dotslist{
+    margin-top: 850px;
+    width: 640px;
+    padding-left: 261px;
+
+}
+
+
+.pagecontentwrapper{
+    width: 640px;
+    height: auto;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 25px;
+    color: #838383;
+    line-height: 30px;
+}
+
+.pagecontentwrapper .taglinks{
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    font-size: 23px;
+
+}
+
+.pagecontentwrapper .taglink{
+    display: block;
+    width: 49.8%;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #d7d7d7;
+    margin-right: 1px;
+    height: 40px;
+    line-height: 40px;
+}
+
+
+.pagecontentwrapper .taglink.on{
+    color: #e60021;
+}
+
+
+.pagecontentwrapper .video{
+    display: block;
+    width: 589px;
+    height: 330px;
+
+    text-align: left;
+    margin: auto;
+    margin-top: 25px;
+    clear: both;
+    border: solid 4px #c0c0c0;
+}
+
+.pagecontentwrapper .content{
+    display: block;
+    width: 589px;
+    height: auto;
+    line-height: 140%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+}
+
+
+.productslist{
+    width: 100%;
+    height: auto;
+}
+
+.productslist .productpic{
+    width: 100%;
+    text-align: center;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.productslist .productslink{
+    width: 100%;
+    text-align: center;
+    padding-left: 5px;
+
+}
+
+
+.productslist .productslink a {
+   display: block;
+    float: left;
+    margin: 5px;
+
+}
+
+.productslist .productslink .p3{
+    margin-top: -87px;
+}
+
+.pagecontentwrapper .contenttitle{
+    width: 612px;
+
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    margin: auto;
+    font-size: 28px;
+
+}
+
+.detailpage .video{
+    width: 612px;
+    height: 442px;
+}
+
+
+.detailpage .content{
+    width: 612px;
+    height: auto;
+    line-height:40px;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+.newswrapper{
+
+    margin-top: 36px;
+
+}
+
+#newslistwrapper{
+    width: 616px;
+    height: 505px;
+    margin:auto;
+}
+
+
+
+.newswrapper .dotslistnews{
+    margin-top: 470px;
+    width: 616px;
+    margin-left:12px;
+
+}
+
+
+#newslistwrapper #scroller{
+    width: 616px;
+    height: 505px;
+    overflow: hidden;
+}
+
+#newslistwrapper  ul{
+    width: 4312px;
+    height: 505px;
+    position: relative;
+
+
+
+}
+
+#newslistwrapper  ul li{
+    width: 616px;
+    height: 505px;
+    float: left;
+}
+
+#newslistwrapper  ul li .title{
+    width: 616px;
+    height: 116px;
+    line-height: 60px;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    font-size: 25px;
+    padding-top: 20px;
+    margin-top: 389px;
+    background-image: url("/wap/images/shadow.png");
+}
+
+
+.newswrapper .newslist{
+    width: 616px;
+    height: auto;
+    margin: auto;
+    background-image: url("/wap/images/newsback.jpg");
+    background-repeat: no-repeat;
+	margin-bottom:20px;
+}
+
+.newswrapper .newslist .newsbrief{
+    width: 100%;
+    height: auto;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 39px;
+    font-size: 26px;
+    line-height: 32px;
+    display: none;
+}
+
+
+.pagecontentwrapper .productpicwrapper{
+    width: 599px;
+    height: 342px;
+    margin: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
+}
+
+.pagecontentwrapper .producttitle{
+    width: 599px;
+    height: 45px;
+    margin: auto;
+    text-align: center;
+    font-size: 29px;
+    line-height: 45px;
+    color: #5b5b5b;
+    background-color: #ededed;
+}
+
+
+
+.pagecontentwrapper .contactwrapper{
+    width: 100%;
+    height: 844px;
+    overflow: hidden;
+    background-color: #f8f7f8;
+    color: #696969;
+    font-size: 24px;
+    line-height: 140%;
+}
+
+.pagecontentwrapper .contactwrapper .citywrapper{
+    display: none;
+}
+
+.pagecontentwrapper .contactwrapper .citywrapper .citydetail{
+    width:625px;
+    height: 173px;
+    overflow: hidden;
+    background-color: #f8f7f8;
+    color: #696969;
+    font-size: 24px;
+    line-height: 180%;
+
+    padding: 10px;
+    padding-top: 25px;
+}
+
+.pagecontentwrapper .contactwrapper .citywrapper .citydetail .title{
+    color: #3f3e3e;
+    font-size: 31px;
+
+}
+
+.pagecontentwrapper .contactwrapper .qr{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.pagecontentwrapper .contactwrapper .qr img{
+    margin-right: 10px;
+}
+
+
+.pagecontentwrapper .contactwrapper .qr a{
+    text-decoration: none;
+    color: #696969;
+}
+
+
+.pagecontentwrapper .contactwrapper .earthwrapper{
+    width: 625px;
+    height: 171px;
+    background-image: url("/wap/images/earth.png");
+    display: block;
+    position: absolute;
+    margin-top: 29px;
+    overflow: hidden;
+
+}
+
+.pagecontentwrapper .contactwrapper .earthwrapper .areawrapper{
+    width: 625px;
+    height: 1600px;
+    position: absolute;
+
+}
+
+.pagecontentwrapper .contactwrapper .earthwrapper .area{
+    width: 88px;
+    height: 1600px;
+    position: absolute;
+    color: #5f5f5f;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 275px;
+    line-height: 60px;
+
+}
+
+.pagecontentwrapper .contactwrapper .earthwrapper .area.on{
+    color: #52c3f1;
+}
+
+
+.wxfloat{
+    position: absolute;
+    z-index: 1000;
+    float: left;
+    left: 0px;
+    top:0px;
+    display: none;
+}
