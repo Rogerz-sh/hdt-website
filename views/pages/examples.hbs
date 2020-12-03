@@ -4,17 +4,17 @@
             height="9">&nbsp;&nbsp;最新案例&nbsp;&nbsp;</div>
     <div class="content">
         <div class="leftcolumn">
-            {{!-- <div class="taglist">
-                        <a href="/archives/category/allwork/newworks/通信电器/?id=30" class="tag">通信电器</a><a
-                            href="/archives/category/allwork/newworks/交通运输/?id=31" class="tag tagon">交通运输</a><a
-                            href="/archives/category/allwork/newworks/旅游酒店/?id=32" class="tag">旅游酒店</a><a
-                            href="/archives/category/allwork/newworks/服饰时尚/?id=33" class="tag">服饰时尚</a><a
-                            href="/archives/category/allwork/newworks/金融保险/?id=35" class="tag">金融保险</a><a
-                            href="/archives/category/allwork/newworks/生活日化/?id=36" class="tag">生活日化</a><a
-                            href="/archives/category/allwork/newworks/食品饮料/?id=38" class="tag">食品饮料</a><a
-                            href="/archives/category/allwork/newworks/电子商务/?id=39" class="tag">电子商务</a><a
-                            href="/archives/category/allwork/newworks/其他/?id=40" class="tag">其他</a>
-                    </div> --}}
+            <div class="taglist">
+                <a href="/example/list/1?type=通信电器" data-type="通信电器" class="tag">通信电器</a>
+                <a href="/example/list/1?type=交通运输" data-type="交通运输" class="tag">交通运输</a>
+                <a href="/example/list/1?type=旅游酒店" data-type="旅游酒店" class="tag">旅游酒店</a>
+                <a href="/example/list/1?type=服饰时尚" data-type="服饰时尚" class="tag">服饰时尚</a>
+                <a href="/example/list/1?type=金融保险" data-type="金融保险" class="tag">金融保险</a>
+                <a href="/example/list/1?type=生活日化" data-type="生活日化" class="tag">生活日化</a>
+                <a href="/example/list/1?type=食品饮料" data-type="食品饮料" class="tag">食品饮料</a>
+                {{!-- <a href="/example/list/1?type=电子商务" data-type="电子商务" class="tag">电子商务</a> --}}
+                <a href="/example/list/1?type=其他" data-type="其他" class="tag">其他</a>
+            </div>
             <div class="anlilist">
                 {{#each examples}}
                 {{#if odd}}
@@ -42,3 +42,21 @@
         {{>example_right}}
     </div>
 </div>
+<script>
+    function parseQueryString(searchStr) {
+        var query = {};
+        if (searchStr.indexOf('?') == 0) {
+            searchStr = searchStr.substr(1);
+        }
+        var arr = searchStr.split('&');
+        arr.forEach(function (q) {
+            var p = q.split('=');
+            query[p[0]] = p[1] === undefined ? '' : p[1];
+        });
+        return query;
+    }
+    $(function () {
+        var query = parseQueryString(location.search), type = decodeURI(query.type);
+        $(`a[data-type="${type}"]`).addClass('tagon')
+    })
+</script>

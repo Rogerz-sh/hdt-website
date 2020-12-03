@@ -236,9 +236,9 @@
 }
 
 .idx-news-top {
-	background: url(../images/idx_news.jpg) center center no-repeat;
+	background: url(../images/index_banner.jpg) center center no-repeat;
 	background-size: cover;
-	padding: 110px 0;
+	padding: 60px 0;
 }
 
 .idx-news-top .tit {

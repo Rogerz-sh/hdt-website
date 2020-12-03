@@ -136,25 +136,26 @@ router.get('/example/list/:page', async (req, res) => {
         let examples = await Example.find({ type: type, is_deleted: 0 }).sort({ publish_date: -1 }).skip(skip).limit(10).exec();
         let count = await Example.count({ type: type, is_deleted: 0 }).exec(), pages = Math.ceil(count / 10), page_nums = [];
         let pager = `<div class="pager">
-                        <a href="/example/list/1" class="pagebtn">首页</a>
-                        <a href="/example/list/${page == 1 ? 1 : page - 1}" class="pagebtn">上一页</a>
+                        <a href="/example/list/1?type=${type}" class="pagebtn">首页</a>
+                        <a href="/example/list/${page == 1 ? 1 : page - 1}?type=${type}" class="pagebtn">上一页</a>
                         [[pages]]
-                        <a href="/example/list/${page == pages ? pages : page + 1}" class="pagebtn">下一页</a>
-                        <a href="/example/list/${pages}" class="pagebtn">末页</a>
+                        <a href="/example/list/${page == pages ? pages : page + 1}?type=${type}" class="pagebtn">下一页</a>
+                        <a href="/example/list/${pages}?type=${type}" class="pagebtn">末页</a>
                     </div>`;
         for (let i = 1; i <= pages; i++) {
             if (i == page) {
                 page_nums.push(`<span>${i}</span>`)
             } else {
-                page_nums.push(`<a href="/example/list/${i}">${i}</a>`)
+                page_nums.push(`<a href="/example/list/${i}?type=${type}">${i}</a>`)
             }
         }
-        examples.forEach(exp => {
+        examples.forEach((exp, i) => {
             data.push({
                 link: '/example/detail/' + exp._id,
                 title: exp.title,
                 cover: exp.cover,
-                publish_date: moment(exp.publish_date).format('YYYY-MM-DD')
+                odd: i % 2 == 0,
+                date: moment(exp.publish_date).format('YYYY年MM月')
             })
         })
         res.render('pages/examples', {
