@@ -20,16 +20,27 @@
 	min-width:1200px;
 	/*padding-top:300px;*/
 	top:0px;
-
+    text-align: center;
 
 }
 
+.indexbannercontrol .dot {
+    width: 12px;
+    height: 12px;
+    background-image: url('/images/dotgray.png');
+    background-size: contain;
+    display: inline-block;
+    margin: 0 5px;
+}
+.indexbannercontrol .dot.on {
+    background-image: url('/images/dotblue.png');
+}
 
 .indexbanner #bannerleft{
     display: block;
     width: 14px;
     height: 20px;
-    background-image: url('../images/arrowleft.png');
+    background-image: url('/images/arrowleft.png');
     
     margin-left: 48%;
     position: absolute;
@@ -40,7 +51,7 @@
     display: block;
     width: 14px;
     height: 20px;
-    background-image: url('../images/arrowright.png');
+    background-image: url('/images/arrowright.png');
    
     margin-left: 52%;
     position: absolute;
@@ -95,7 +106,7 @@
     width: 86px;
     height: 86px;
     display: block;
-    background-image: url('../images/indexmore.png');
+    background-image: url('/images/indexmore.png');
     margin-top: -13px;
 }
 
@@ -159,7 +170,7 @@
     border-bottom: solid 1px #cdcdcd;
     color: #959595;
     line-height: 39px;
-    background-image: url('../images/listicon.png');
+    background-image: url('/images/listicon.png');
     background-repeat: no-repeat;
     background-position: left 14px;
 }
@@ -220,7 +231,7 @@
     height: 11px;
     margin-right: 5px;
     background-repeat: no-repeat;
-    background-image: url('../images/dotgray.png');
+    background-image: url('/images/dotgray.png');
 }
 
 .indexnewswrapper .newsblock .detail .newsbanner .dots .gray{
@@ -228,7 +239,7 @@
 }
 
 .indexnewswrapper .newsblock .detail .newsbanner .dots .blue{
-    background-image: url('../images/dotblue.png');
+    background-image: url('/images/dotblue.png');
 }
 
 .idx-news {
@@ -236,7 +247,7 @@
 }
 
 .idx-news-top {
-	background: url(../images/index_banner.jpg) center center no-repeat;
+	background: url(/images/index_banner.jpg) center center no-repeat;
 	background-size: cover;
 	padding: 60px 0;
 }

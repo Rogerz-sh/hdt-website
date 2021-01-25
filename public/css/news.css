@@ -13,6 +13,16 @@
 	float:right;
 }
 
+.searchctn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.searchctn input {
+    margin-right:10px;
+}
+
 
 .formitem{
 	padding:4px;

@@ -79,9 +79,10 @@ router.get('/works/detail/:id', (req, res) => {
 
 router.get('/news/list/:page', async (req, res) => {
     try {
-        let page = +req.params.page || 1, skip = (page - 1) * 10, data = [];
-        let articles = await Article.find({ is_deleted: 0 }).sort({ publish_date: -1 }).skip(skip).limit(10).exec();
-        let count = await Article.count({ is_deleted: 0 }).exec(), pages = Math.ceil(count / 10), page_nums = [];
+        let page = +req.params.page || 1, keyword = unescape(req.query.keyword || ''), skip = (page - 1) * 10, data = [], where = { is_deleted: 0 };
+        if (keyword) where['title'] = new RegExp(keyword, 'ig');
+        let articles = await Article.find(where).sort({ publish_date: -1 }).skip(skip).limit(10).exec();
+        let count = await Article.count(where).exec(), pages = Math.ceil(count / 10), page_nums = [];
         let pager = `<div class="pager">
                         <a href="/news/list/1" class="pagebtn">首页</a>
                         <a href="/news/list/${page == 1 ? 1 : page - 1}" class="pagebtn">上一页</a>
